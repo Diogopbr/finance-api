@@ -1,14 +1,3 @@
-/**
- * Finance API - Server Entry Point
- * 
- * API RESTful profissional para gestão financeira
- * Implementa Clean Architecture e princípios SOLID
- * 
- * @author Seu Nome
- * @version 1.0.0
- * @license MIT
- */
-
 import express, { Application } from 'express';
 import { transactionRoutes } from './modules/transactions/routes';
 import { errorHandler } from './shared/middlewares/errorHandler';

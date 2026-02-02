@@ -1,32 +1,7 @@
-/**
- * Transaction Service
- * 
- * Camada de lógica de negócio do módulo de transações.
- * Implementa o princípio SRP - contém APENAS regras de negócio.
- * 
- * Responsabilidades:
- * - Validações de negócio (ex: amount > 0)
- * - Orquestração de operações
- * - Aplicação de regras de domínio
- * 
- * NÃO contém:
- * - Lógica de HTTP (responsabilidade do Controller)
- * - Acesso direto ao banco (responsabilidade do Repository)
- * 
- * @module modules/transactions
- */
-
 import { NotFoundError, ValidationError } from '../../shared/errors/AppError';
 import { TransactionRepository } from './repository';
 import { CreateTransactionDTO, UpdateTransactionDTO, Transaction, TransactionFilters, TransactionSummary } from './transaction.interface';
 
-/**
- * Transaction Service Class
- * 
- * Implementa DIP (Dependency Inversion Principle):
- * - Depende da abstração (Repository), não da implementação
- * - Recebe dependências via construtor (Dependency Injection)
- */
 export class TransactionService {
   constructor(private readonly repository: TransactionRepository) {}
 

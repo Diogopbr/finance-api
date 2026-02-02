@@ -1,21 +1,3 @@
-/**
- * Custom Application Errors
- * 
- * Implementa hierarquia de erros customizados seguindo o princípio SRP (Single Responsibility).
- * Cada classe de erro tem uma responsabilidade específica e facilita o tratamento de exceções.
- * 
- * @module shared/errors
- */
-
-/**
- * Base Error Class
- * 
- * Classe abstrata base para todos os erros da aplicação.
- * Implementa o princípio SRP - responsável apenas por estruturar erros com status HTTP.
- * 
- * @abstract
- * @extends Error
- */
 export abstract class AppError extends Error {
   public readonly statusCode: number;
 
@@ -27,24 +9,12 @@ export abstract class AppError extends Error {
   }
 }
 
-/**
- * Not Found Error (404)
- * 
- * Usado quando um recurso solicitado não é encontrado.
- * Exemplo: Transação com ID inexistente
- */
 export class NotFoundError extends AppError {
   constructor(message: string = 'Resource not found') {
     super(message, 404);
   }
 }
 
-/**
- * Validation Error (400)
- * 
- * Usado quando os dados fornecidos não passam na validação.
- * Exemplo: Valor negativo para amount
- */
 export class ValidationError extends AppError {
   constructor(message: string = 'Validation failed') {
     super(message, 400);

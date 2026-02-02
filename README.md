@@ -356,7 +356,37 @@ vercel
 - [ ] Logs estruturados (Winston/Pino)
 - [ ] Métricas e observabilidade
 - [ ] CI/CD pipeline
-- [ ] Docker e Docker Compose
+
+## 🚀 Deploy
+
+### Railway (Recomendado)
+
+Railway oferece PostgreSQL gratuito e deploy simplificado:
+
+```bash
+npm i -g @railway/cli
+railway login
+railway init
+railway add  # Adicionar PostgreSQL
+railway up
+```
+
+Configure as variáveis de ambiente no dashboard e execute as migrations:
+```bash
+railway run npm run prisma:migrate
+```
+
+### Vercel
+
+Para deploy na Vercel, você precisará de um PostgreSQL externo (Supabase, Neon, etc):
+
+```bash
+npm i -g vercel
+vercel login
+vercel
+```
+
+Configure `DATABASE_URL` nas variáveis de ambiente.
 
 ## 🤝 Contribuindo
 
