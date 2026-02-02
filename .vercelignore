@@ -1,0 +1,12 @@
+node_modules
+src
+*.test.ts
+coverage
+.env
+.env.local
+.env.example
+README.md
+docs
+.git
+.github
+prisma/migrations

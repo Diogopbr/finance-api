@@ -1,0 +1,2 @@
+// Arquivo de exemplo de migração
+// Execute: npm run prisma:migrate
