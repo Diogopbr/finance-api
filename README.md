@@ -11,7 +11,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)]()
-[![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)]()
 
 </div>
 
@@ -98,7 +97,7 @@ src/
 
 1. **Clone o repositório**
 ```bash
-git clone <seu-repositorio>
+git clone https://github.com/Diogopbr/finance-api.git
 cd finance-api
 ```
 
